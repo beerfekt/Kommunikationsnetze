@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane id="scene" prefHeight="559.0" prefWidth="281.0" style="-fx-border-radius: 10;" stylesheets="@../../../Ampel/src/anwendung/application.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AServerController">
+   <top>
+      <AnchorPane opacity="0.46" prefHeight="0.0" prefWidth="270.0" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="507.0" prefWidth="241.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="235.0" layoutX="29.0" layoutY="70.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" style="-fx-border-radius: 10;" width="84.0">
+               <effect>
+                  <Blend />
+               </effect>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="160.0" layoutX="135.0" layoutY="70.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" style="-fx-border-radius: 20; -fx-border-color: black;" width="73.0" />
+            <Circle fx:id="autorot" fill="WHITE" layoutX="72.0" layoutY="114.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" />
+            <Circle fx:id="autogelb" fill="WHITE" layoutX="71.0" layoutY="189.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" />
+            <Circle fx:id="autogruen" fill="WHITE" layoutX="72.0" layoutY="263.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" />
+            <Circle fx:id="fussrot" fill="WHITE" layoutX="172.0" layoutY="113.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" />
+            <Circle fx:id="fussgruen" fill="WHITE" layoutX="172.0" layoutY="188.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" />
+            <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" graphicTextGap="7.0" layoutX="28.0" opacity="0.49" prefHeight="47.0" prefWidth="181.0" text="AMPEL SERVER">
+               <font>
+                  <Font name="Khmer OS System" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="state" layoutX="173.0" layoutY="268.0" prefHeight="35.0" prefWidth="32.0" />
+            <Button fx:id="start" layoutX="30.0" layoutY="399.0" mnemonicParsing="false" onAction="#setStart" opacity="0.71" prefHeight="0.0" prefWidth="61.0" text="START" />
+            <TextField fx:id="port" alignment="CENTER" layoutX="29.0" layoutY="362.0" prefHeight="26.0" prefWidth="180.0" promptText="Enter this Port" />
+            <Button fx:id="quit" layoutX="141.0" layoutY="400.0" mnemonicParsing="false" onAction="#setQuit" opacity="0.71" prefHeight="0.0" prefWidth="66.0" text="QUIT" />
+            <Circle fx:id="running" fill="WHITE" layoutX="114.0" layoutY="415.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Text layoutX="88.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="running" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
